@@ -101,6 +101,10 @@ To post a blog or like a blog using Postman, you'll need to follow these steps. 
     - Replace `<your_jwt_token>` with the token you copied from the login response.
 3. **Send the request**. You should get a response indicating that the blog post was liked.
 
+### Step 5: List all blog posts
+
+1. **Create a new GET request** to `http://localhost:3000/blog`.
+
 ### Example of Request Headers in Postman
 
 When you add the `Authorization` header in Postman, it should look something like this:
@@ -153,6 +157,10 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
     - **Headers**:
         - Key: `Authorization`
         - Value: `Bearer <your_jwt_token>`
+		
+5. **List All Blog Posts:**
+    - **URL**: `http://localhost:3000/blog`
+    - **Method**: GET
 
 
 
