@@ -1,6 +1,5 @@
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
-const pool = require('../config/db');
 const User = require('../models/user')
 const secret = 'mysecret'; // Use environment variable for production
 

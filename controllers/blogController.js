@@ -1,4 +1,3 @@
-const pool = require('../config/db');
 const Blog = require('../models/blog');
 
 exports.createBlog = async (req, res) => {
