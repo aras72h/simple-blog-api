@@ -5,13 +5,13 @@ Make sure you have PostgreSQL installed and running. Then, create a database and
 ```sql
 CREATE DATABASE blog;
 
-CREATE TABLE users (
+CREATE TABLE Users (
   id SERIAL PRIMARY KEY,
   username VARCHAR(100) UNIQUE NOT NULL,
   password VARCHAR(100) NOT NULL
 );
 
-CREATE TABLE blogs (
+CREATE TABLE Blogs (
   id SERIAL PRIMARY KEY,
   user_id INTEGER REFERENCES users(id),
   title VARCHAR(255) NOT NULL,
@@ -19,7 +19,7 @@ CREATE TABLE blogs (
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
-CREATE TABLE user_like_blog (
+CREATE TABLE User_Like_Blog (
   user_id INTEGER REFERENCES users(id),
   blog_id INTEGER REFERENCES blogs(id),
   PRIMARY KEY (user_id, blog_id)
